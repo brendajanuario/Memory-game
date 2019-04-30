@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script  src="../javascripts/memorygame.js"></script>
+    <script  src="../javascripts/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert2.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Metamorphous' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+    <title>Memory Game</title>
+</head>
+<body>
+<div id="audio"></div>
+<div class="container">
+<h1 class="init">MEMORY GAME</h1>
+<a id="click" href="#push"></a>
+<br/>
+<header class="init" id="members"> Brenda Januário : 194832 - Kaulitz Guimarães : 188530 - Rodrigo Martins : 157194 - Verussa Caridi : 206453 </header>
+ <br/><br/>
+
+
+        <div  id="gameForm" class="container">
+
+            <div class="jumbotron">
+                <form>
+                    <h3 class="formTitle">Game Form</h3>
+
+                    <div class="wrapperForm">
+                    <div class="playerNames">
+                        <label>First Player :</label><br/>
+                        <input id="name1" type="text" name="firstname" placeholder="Player 1 name..."><br/>
+                        <label>Second Player:</label><br/>
+                        <input id="name2" type="text" name="lastname" placeholder="Player 2 name..."><br/>
+                    </div>
+
+                    <div class="tableConfig">
+                        <label>Table configuration :</label><br/>
+                        <label class="gridXY"><input type="radio" name="table" value="1" checked> 2x2</label><br/>
+                        <label class="gridXY"><input type="radio" name="table" value="2"> 4x4</label><br/>
+                        <label class="gridXY"><input type="radio" name="table" value="3"> 6x6</label><br/>
+                    </div>
+                    </div>
+
+                    <div class="gameTheme">
+                        <label>Theme :</label><br/>
+                        <label class="gameThemeOption"><input type="radio" name="theme" value="1" checked> programmerAddicted</label>
+                        <label class="gameThemeOption"><input type="radio" name="theme" value="2" > Ragnarok</label>
+                        <label class="gameThemeOption"><input type="radio" name="theme" value="3" > Meme Icons</label>
+                        <label class="gameThemeOption"><input type="radio" name="theme" value="4" > Sweet</label>                    </div>
+                    <div class="formButtons">
+                        <input class="generalButton" type="button" onclick="chooseRandomly()" value="CHOOSE RANDOMLY">
+                        <input class="startGame" type="button"  onclick="startGame()" value="START GAME">
+                    </div>
+                </form>
+            </div>
+        </div>
+    <h3 id="push"> &nbsp;</h3>
+<div class="container">
+    <div id="memoryGame" class="jumbotron">
+        <div id="table">
+            <h2>RULES</h2>
+            <ol>
+                <li>You must choose the theme and the table configuration</li>
+                <li>If you want to play as  a Single Player, let the name of player 2 in blank</li>
+                <li>The first player is the  name1 </li>
+                <li>The game ends when the last pair of pieces is founded.</li>
+                <li>You can flip all th pieces with button 'FLIP', it will not change  your game dynamic, <br/> if you want to untap the pieces, click in 'BACK' </li>
+                <li>Have a nice game!!!</li>
+            </ol>
+        </div>
+
+        <br/>
+        <br/>
+        <form>
+
+            <input class="generalButton" type="button" onclick="dealWithUnclickedPieces(false)" value="FLIP">
+            <input class="generalButton" type="button" onclick="dealWithUnclickedPieces(true)" value="BACK">
+            <input class="stopGame" type="button"  onclick="stopGame(true)" value="STOP GAME">
+        </form>
+    </div>
+</div>
+
+
+
+    <div id="historyGame">
+        <div   class="container">
+            <div class="table-wrapper-scroll-y jumbotron">
+                <h4>Game History: </h4>
+
+                <div id="history"></div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<footer class="container init" >Web programming- SI401A </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body{
+    background-image : url("../images/paw.jpg");
+}
+
+.init{
+    font-family: 'Quantico' !important;
+    color: greenyellow !important;
+}
+
+.container {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.formTitle {
+    font-family: 'Quantico' !important;
+    color: greenyellow  !important;
+}
+
+.generalButton {
+    margin-top: 10px;
+    font-family: 'Quantico' !important;
+    background-color: greenyellow !important;
+    color: black !important;
+    border: none;
+    padding: 6px 15px;
+}
+
+.startGame {
+    font-family: 'Quantico' !important;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: black !important;
+    color: greenyellow !important; 
+    border: none;
+    padding: 10px 20px;
+}
+
+.stopGame {
+    font-family: 'Quantico' !important;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: black !important;
+    color: greenyellow !important; 
+    border: none;
+    padding: 6px 15px;
+}
